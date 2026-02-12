@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WR Rivning | Kristinehamn</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wr: {
+                            yellow: '#FFD700',
+                            gold: '#FDB813',
+                            black: '#0f0f0f',
+                            dark: '#1a1a1a',
+                            gray: '#2d2d2d'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #FFD700, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-wr-black text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-wr-black/90 backdrop-blur-md border-b border-wr-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-black tracking-tighter text-wr-yellow border-2 border-wr-yellow px-2 py-1">WR</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#hem" class="hover:text-wr-yellow transition-colors px-3 py-2 rounded-md text-sm font-medium">Hem</a>
+                        <a href="#tjanster" class="hover:text-wr-yellow transition-colors px-3 py-2 rounded-md text-sm font-medium">Tjänster</a>
+                        <a href="#om" class="hover:text-wr-yellow transition-colors px-3 py-2 rounded-md text-sm font-medium">Om oss</a>
+                        <a href="#kontakt" class="bg-wr-yellow text-wr-black hover:bg-white transition-all duration-300 px-5 py-2 rounded font-bold btn-glow">Kontakta Oss</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-wr-dark">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-700">
+                <a href="#hem" class="text-gray-300 hover:text-wr-yellow block px-3 py-2 rounded-md text-base font-medium">Hem</a>
+                <a href="#tjanster" class="text-gray-300 hover:text-wr-yellow block px-3 py-2 rounded-md text-base font-medium">Tjänster</a>
+                <a href="#om" class="text-gray-300 hover:text-wr-yellow block px-3 py-2 rounded-md text-base font-medium">Om oss</a>
+                <a href="#kontakt" class="text-wr-yellow font-bold block px-3 py-2 rounded-md text-base">Kontakta Oss</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="hem" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Renovering" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-wr-black via-wr-black/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-wr-yellow/30 bg-wr-yellow/10 text-wr-yellow text-sm font-semibold tracking-wide uppercase" data-aos="fade-down">
+                Kristinehamns Rivningsspecialist
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight" data-aos="fade-up" data-aos-delay="100">
+                VI TAR HAND OM <br>
+                <span class="gradient-text">DET TUNGA JOBBET</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light" data-aos="fade-up" data-aos-delay="200">
+                Professionell lättrivning och utrensning för privatpersoner. Vi förbereder ditt hem för framtidens drömmar.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="300">
+                <a href="#kontakt" class="px-8 py-4 bg-gradient-to-r from-wr-yellow to-wr-gold text-wr-black font-bold text-lg rounded shadow-lg hover:scale-105 transition-transform duration-300">
+                    Begär Offert
+                </a>
+                <a href="#tjanster" class="px-8 py-4 border border-white/20 hover:bg-white/10 text-white font-semibold text-lg rounded backdrop-blur-sm transition-all">
+                    Våra Tjänster
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="tjanster" class="py-24 bg-wr-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Vad vi river</h2>
+                <div class="w-24 h-1 bg-wr-yellow mx-auto"></div>
+                <p class="mt-4 text-gray-400">Manuell rivning utan tunga maskiner. Snabbt, snyggt och säkert.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="group bg-wr-gray p-8 rounded-xl hover:bg-wr-yellow transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-black/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-black/10 transition-colors">
+                        <i class="fa-solid fa-hammer text-2xl text-wr-yellow group-hover:text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-black">Köksrivning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed group-hover:text-black/80">
+                        Total nedmontering av gamla kök, stommar och vitvaror. Vi lämnar en ren yta för snickaren.
+                    </p>
+                </div>
+
+                <div class="group bg-wr-gray p-8 rounded-xl hover:bg-wr-yellow transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-black/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-black/10 transition-colors">
+                        <i class="fa-solid fa-sink text-2xl text-wr-yellow group-hover:text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-black">Badrum</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed group-hover:text-black/80">
+                        Bilning av kakel och klinker. Vi avlägsnar porslin och inredning dammsäkert och effektivt.
+                    </p>
+                </div>
+
+                <div class="group bg-wr-gray p-8 rounded-xl hover:bg-wr-yellow transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-black/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-black/10 transition-colors">
+                        <i class="fa-solid fa-layer-group text-2xl text-wr-yellow group-hover:text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-black">Golv & Vägg</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed group-hover:text-black/80">
+                        Borttagning av plastmattor, laminat och tapet. Återställning till betong eller undergolv.
+                    </p>
+                </div>
+
+                <div class="group bg-wr-gray p-8 rounded-xl hover:bg-wr-yellow transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-black/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-black/10 transition-colors">
+                        <i class="fa-solid fa-truck-ramp-box text-2xl text-wr-yellow group-hover:text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-black">Utrensning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed group-hover:text-black/80">
+                        Vi tömmer förråd, garage och dödsbon. Sortering och transport till återvinning ingår.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="om" class="py-24 bg-wr-black overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-wr-yellow"></div>
+                        <img src="client.jpeg" alt="Arbete pågår" class="rounded shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full object-cover h-[500px]">
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-wr-yellow"></div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h4 class="text-wr-yellow font-bold uppercase tracking-widest mb-2">Om Företaget</h4>
+                    <h2 class="text-4xl font-black text-white mb-6">Vi gör plats för det nya</h2>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        WR är ett nystartat rivningsföretag i Kristinehamn med en tydlig vision: Att erbjuda privatpersoner en smidig väg genom renoveringens jobbigaste fas.
+                    </p>
+                    <p class="text-gray-400 mb-8">
+                        Vi vet att stora rivningsfirmor ofta fokuserar på industrier. Vi fokuserar på ditt hem. Med handverktyg, kofot och styrka river vi varsamt men effektivt, så att du slipper damm och tunga lyft.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-white">
+                            <i class="fa-solid fa-check text-wr-yellow mr-3"></i> Inga förstörda trädgårdar (inga stora maskiner)
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fa-solid fa-check text-wr-yellow mr-3"></i> Städning ingår alltid
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fa-solid fa-check text-wr-yellow mr-3"></i> Fullt försäkrade
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="glass-panel rounded-3xl p-10 md:p-16 shadow-2xl border-t border-wr-yellow/20" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">Starta ditt projekt idag</h2>
+                <p class="text-gray-300 mb-12 max-w-2xl mx-auto">
+                    Kontakta oss för en kostnadsfri offert. Vi kommer ut och tittar på jobbet i Kristinehamn med omnejd.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-wr-yellow rounded-full flex items-center justify-center text-black mb-4">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h4 class="font-bold text-white">Ring Oss</h4>
+                        <a href="tel:0701234567" class="text-gray-400 hover:text-wr-yellow transition">070 - XXX XX XX</a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-wr-yellow rounded-full flex items-center justify-center text-black mb-4">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="font-bold text-white">Maila Oss</h4>
+                        <a href="mailto:info@wr-rivning.se" class="text-gray-400 hover:text-wr-yellow transition">info@wr-rivning.se</a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-wr-yellow rounded-full flex items-center justify-center text-black mb-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 class="font-bold text-white">Besök Oss</h4>
+                        <span class="text-gray-400">Kristinehamn, Värmland</span>
+                    </div>
+                </div>
+
+                <a href="mailto:info@wr-rivning.se" class="inline-block bg-wr-yellow text-wr-black font-extrabold text-xl px-10 py-4 rounded hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg shadow-yellow-500/20">
+                    Skicka Förfrågan <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 border-t border-gray-800 text-center">
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 WR Rivning. Alla rättigheter förbehållna.
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
